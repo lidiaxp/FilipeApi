@@ -10,10 +10,7 @@ var express  = require('express'),
 
     Todo = mongoose.model('Todo', Schema);
 
-mongoose.connect(process.env.MONGOLAB_URI, function (error) {
-    if (error) console.error(error);
-    else console.log('mongo connected');
-});
+mongoose.connect('mongodb://lidiaxp:lidiaxp123@ds053148.mongolab.com:53148/<database name>');
 
 express()
   // https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters
